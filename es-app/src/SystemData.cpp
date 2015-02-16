@@ -431,6 +431,16 @@ unsigned int SystemData::getGameCount() const
 	return mRootFolder->getFilesRecursive(GAME).size();
 }
 
+unsigned int SystemData::getFavoritesCount() const
+{
+	return mRootFolder->getFavoritesRecursive(GAME).size();
+}
+
+bool SystemData::getHasFavorites() const
+{
+	return mHasFavorites;
+}
+
 void SystemData::loadTheme()
 {
 	mTheme = std::make_shared<ThemeData>();
@@ -443,6 +453,7 @@ void SystemData::loadTheme()
 	try
 	{
 		mTheme->loadFile(path);
+		mHasFavorites = mTheme->getHasFavoritesInTheme();
 	} catch(ThemeException& e)
 	{
 		LOG(LogError) << e.what();
