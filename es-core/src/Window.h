@@ -4,6 +4,7 @@
 #include <vector>
 #include "resources/Font.h"
 #include "InputManager.h"
+#include "Util.h"
 
 class HelpComponent;
 class ImageComponent;

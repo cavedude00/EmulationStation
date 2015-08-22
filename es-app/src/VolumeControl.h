@@ -2,7 +2,6 @@
 
 #include <memory>
 #include <stdint.h>
-
 #if defined (__APPLE__)
     #error TODO: Not implemented for MacOS yet!!!
 #elif defined(__linux__)
@@ -14,6 +13,7 @@
 	#include <MMSystem.h>
 	#include <mmdeviceapi.h>
 	#include <endpointvolume.h>
+	#include "Util.h"
 #endif
 
 /*!

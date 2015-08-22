@@ -2,6 +2,7 @@
 //http://www.aloshi.com
 
 #include <SDL.h>
+#undef main
 #include <iostream>
 #include <iomanip>
 #include "Renderer.h"
