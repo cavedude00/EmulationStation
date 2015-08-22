@@ -138,8 +138,6 @@ void BasicGameListView::remove(FileData *game)
 	onFileChanged(game, FILE_REMOVED);           // update the view, with game removed
 }
 
-void BasicGameListView::updateInfoPanel() {}
-
 std::vector<HelpPrompt> BasicGameListView::getHelpPrompts()
 {
 	std::vector<HelpPrompt> prompts;
