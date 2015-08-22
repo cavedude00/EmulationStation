@@ -7,16 +7,12 @@
 
 #include "GamesDBScraper.h"
 #include "GamesDBListScraper.h"
-#include "TheArchiveScraper.h"
-#include "GamesDBScraper.h"
 #include "GamesDBShaScraper.h"
 #include "TheArchiveScraper.h"
 
 const std::map<std::string, generate_scraper_requests_func> scraper_request_funcs = boost::assign::map_list_of
 	("TheGamesDB", &thegamesdb_generate_scraper_requests)
 	("TheGamesDBList", &thegamesdblist_generate_scraper_requests)
-	("TheArchive", &thearchive_generate_scraper_requests);
-	("TheGamesDB", &thegamesdb_generate_scraper_requests)
 	("TheGamesDB w/SHA1", &thegamesdbsha_generate_scraper_requests)
 	("TheArchive", &thearchive_generate_scraper_requests);
 
